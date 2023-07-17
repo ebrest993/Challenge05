@@ -1,11 +1,11 @@
 $(function () {
-let saveBtn = $(".saveBtn");
-let todayDate = dayjs();
-let timeSlot = $(".description");
-let calendForm = $(".time-block")
-let toDo = [];
+  let saveBtn = $(".saveBtn");
+  let todayDate = dayjs();
+  let timeSlot = $(".description");
+  let calendForm = $(".time-block")
+  let toDo = [];
   
-let dayEvent = localStorage.getItem("to-dos");
+  let dayEvent = localStorage.getItem("to-dos");
 
   $("#currentDay").text(todayDate.format("MMM, D YYYY"));
 
