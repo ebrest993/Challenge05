@@ -1,15 +1,12 @@
 $(function () {
   let saveBtn = $(".saveBtn");
-  let todayDate = dayjs();
+  let todayDate = dayjs().format("h");
   let timeSlot = $(".description");
   let calendForm = $(".container-lg")
   let toDo = [];
   
-  // let dayEvent = localStorage.getItem("to-dos");
-
+  console.log(todayDate);
   $("#currentDay").text(todayDate.format("MMM, D YYYY"));
-
-  // $(timeSlot).text(dayEvent);
 
   $(function () {
     $(saveBtn).on("click", function () {
@@ -19,6 +16,13 @@ $(function () {
       localStorage.setItem(time, value); 
       });
     })
+
+  $(function () {
+    if(timeSlot == todayDate) {
+      console.log("whaddya know");
+    }
+  })  
+
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
   $('#hour-10 .description').val(localStorage.getItem('hour-10'));
   $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -31,11 +35,6 @@ $(function () {
   });
 
 
-
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
 
 
