@@ -1,11 +1,12 @@
 $(function () {
   let saveBtn = $(".saveBtn");
-  let todayDate = dayjs().format("h");
+  let todayDate = dayjs();
   let timeSlot = $(".description");
   let calendForm = $(".container-lg")
   let toDo = [];
+  let timeWindow = document.querySelector("time");
   
-  console.log(todayDate);
+  console.log(timeWindow);
   $("#currentDay").text(todayDate.format("MMM, D YYYY"));
 
   $(function () {
@@ -17,11 +18,9 @@ $(function () {
       });
     })
 
-  $(function () {
-    if(timeSlot == todayDate) {
-      console.log("whaddya know");
-    }
-  })  
+  let hourJS = $(timeSlot).val($(dayjs("9:00")));
+  console.log(hourJS);
+  
 
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
   $('#hour-10 .description').val(localStorage.getItem('hour-10'));
