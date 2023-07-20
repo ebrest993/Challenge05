@@ -19,6 +19,4 @@ Otherwise, all past timeslots turn grey.
 
 ![The full calendar. Green for future, red for present, grey for past.](image.png)
 
-![Current date and time for reference.](image-1.png)
-
 ![The heading of the calendar.](image-2.png)
